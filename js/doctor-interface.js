@@ -1,16 +1,13 @@
 var DoctorData = require('./../js/doctor.js').doctorModule;
 var displayDoctors = function(medicalIssue, doctorEntry) {
   //medicalIssue param not needed unless printing it out
-  $('.showCondition').text("You inputted: " + medicalIssue);
+  $('.showCondition').text("You inputted: " + medicalIssue.capitalizeFirst());
   doctorEntry.forEach(function(entry) {
     $('.showDoctors').append("<li>" + entry.profile.first_name + "</li>");
   })
-  console.log(doctorEntry);
-
 }
 
 $(document).ready(function(){
-
 
   $('#search-form').submit(function(event) {
     event.preventDefault();
