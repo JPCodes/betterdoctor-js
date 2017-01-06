@@ -1,6 +1,6 @@
 # _Portland Doctor Search_
 
-#### _A web application that helps search for a doctor. 01/06/2017_
+#### _A web application that helps the user search for a doctor. 01/06/2017_
 
 #### By _**Jim Padilla**_
 
@@ -20,7 +20,13 @@ touch .env
 ```
 * _In the .env file add this line with your API key:_
 ```
-exports.apiKey = "Your Key";
+exports.apiKey = "Your-BetterDoctorAPI-Key-Here";
+```
+
+* _In the command line, run:_
+```
+gulp build
+gulp serve
 ```
 * _Then, in any modern browser, navigate to:_
 ```
