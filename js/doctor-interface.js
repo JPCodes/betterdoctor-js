@@ -3,11 +3,11 @@ var displayDoctors = function(medicalIssue, doctorEntry) {
   //medicalIssue param not needed unless printing it out
   $('.showCondition').text("You inputted: " + medicalIssue.capitalizeFirst());
   doctorEntry.forEach(function(entry) {
-    $('.showDoctors').append("<li>" + entry.profile.first_name + ' '
+    $('.showDoctors').append("<li class='text-center list-styling'>" + entry.profile.first_name + ' '
                                     + entry.profile.last_name + ' '
                                     + entry.profile.title
                                     + "<ul>"
-                                    + "<li>" + "Specialty: " + entry.specialties[0].name + "</li>" + "</li>"
+                                    + "<li class='text-center list-styling'>" + "Specialty: " + entry.specialties[0].name + "</li>" + "</li>"
                                     + "</ul>"
                                   );
   });
@@ -22,7 +22,6 @@ $(document).ready(function(){
     $('.showDoctors').empty();
     var medicalIssue = $('#condition-input').val();
     newDoctorData.getDoctors(medicalIssue, displayDoctors);
-    console.log(newDoctorData);
   });
 
 
