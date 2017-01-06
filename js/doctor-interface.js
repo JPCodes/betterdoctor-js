@@ -4,14 +4,16 @@ var displayDoctors = function(medicalIssue, doctorEntry) {
   $('.showCondition').text("You inputted: " + medicalIssue.capitalizeFirst());
   doctorEntry.forEach(function(entry) {
     $('.showDoctors').append("<li>" + entry.profile.first_name + "</li>");
-  })
-}
+  });
+};
 
 $(document).ready(function(){
+  var newDoctorData = new DoctorData();
 
   $('#search-form').submit(function(event) {
     event.preventDefault();
-    var newDoctorData = new DoctorData();
+    newDoctorData.retrieved = [];
+    $('.showDoctors').empty();
     var medicalIssue = $('#condition-input').val();
     newDoctorData.getDoctors(medicalIssue, displayDoctors);
   });
