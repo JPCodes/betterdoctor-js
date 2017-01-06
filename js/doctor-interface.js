@@ -7,7 +7,7 @@ var displayDoctors = function(medicalIssue, doctorEntry) {
                                     + entry.profile.last_name + ' '
                                     + entry.profile.title
                                     + "<ul>"
-                                    + "<li>" + entry.specialties[0].name + "</li>" + "</li>"
+                                    + "<li>" + "Specialty: " + entry.specialties[0].name + "</li>" + "</li>"
                                     + "</ul>"
                                   );
   });
