@@ -5,7 +5,11 @@ var displayDoctors = function(medicalIssue, doctorEntry) {
   doctorEntry.forEach(function(entry) {
     $('.showDoctors').append("<li>" + entry.profile.first_name + ' '
                                     + entry.profile.last_name + ' '
-                                    + entry.profile.title + "</li>");
+                                    + entry.profile.title
+                                    + "<ul>"
+                                    + "<li>" + entry.specialties[0].name + "</li>" + "</li>"
+                                    + "</ul>"
+                                  );
   });
 };
 
