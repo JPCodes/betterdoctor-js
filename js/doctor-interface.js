@@ -1,14 +1,23 @@
 var DoctorData = require('./../js/doctor.js').doctorModule;
-var apiKey = require('./../.env').apiKey;
+var displayDoctors = function(medicalIssue, doctorEntry) {
+  //medicalIssue param not needed unless printing it out
+  $('.showCondition').text(medicalIssue);
+  doctorEntry.forEach(function() {
+    $('.showDoctors').text(medicalIssue);
+  })
+  console.log(doctorEntry);
+
+}
 
 $(document).ready(function(){
 
-  var newDoctorData = new DoctorData();
+
   $('#search-form').submit(function(event) {
     event.preventDefault();
+    var newDoctorData = new DoctorData();
     var medicalIssue = $('#condition-input').val();
-
-    newDoctorData.getDoctors(medicalIssue, apiKey)
+    newDoctorData.getDoctors(medicalIssue, displayDoctors);
   });
+
 
 });
