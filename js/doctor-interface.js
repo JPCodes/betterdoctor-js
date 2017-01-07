@@ -1,8 +1,16 @@
 var DoctorData = require('./../js/doctor.js').doctorModule;
+// var displayDoctors = function(medicalIssue, doctorEntry) {
+//   $('.showCondition').append("<h2>" + "You inputted: " + medicalIssue.capitalizeFirst() + "</h2>");
+//   doctorEntry.forEach(function(entry) {
+//     $('.showDoctors').append("<li class='center-text'>" + "<div class='media'>" + "<div class='media-left media-middle'>" + "<img class='media-object' src='" + entry.profile.image_url + "'>" + "</div>" + "<div class='media-body media-middle'>" + "<p>" + entry.profile.first_name + ' ' + entry.profile.last_name + ' ' + entry.profile.title + "</p>" + "<p>" +"Specialty: " + entry.specialties[0].name + "</p>" + "</li>" + "</div>" + "</div>" + "<hr>"
+//     );
+//   });
+// };
 var displayDoctors = function(medicalIssue, doctorEntry) {
   $('.showCondition').append("<h2>" + "You inputted: " + medicalIssue.capitalizeFirst() + "</h2>");
   doctorEntry.forEach(function(entry) {
-    $('.showDoctors').append("<li class='center-text'>" + "<div class='media'>" + "<div class='media-left media-middle'>" + "<img class='media-object' src='" + entry.profile.image_url + "'>" + "</div>" + "<div class='media-body media-middle'>" + "<p>" + entry.profile.first_name + ' ' + entry.profile.last_name + ' ' + entry.profile.title + "</p>" + "<p>" +"Specialty: " + entry.specialties[0].name + "</p>" + "</li>" + "</div>" + "</div>" + "<hr>"
+    $('.showDoctors').append("<div class='content-section-b'> <div class='container'><div class='row'><div class='col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6'><hr class='section-heading-spacer'><div class='clearfix'></div><h2 class='section-heading'>"
+    + entry.profile.first_name + ' ' + entry.profile.last_name + "<br>" + entry.specialties[0].name + "</h2>" + "<p class='lead'>" + entry.profile.bio + "</p> </div> <div class='col-lg-5 col-sm-pull-6  col-sm-6'><img class='img-responsive doc-profile' src=" + entry.profile.image_url + ">"
     );
   });
 };

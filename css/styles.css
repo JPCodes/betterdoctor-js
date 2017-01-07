@@ -1,19 +1,4 @@
-ul {
-  padding-left: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.showCondition {
-  margin-bottom: 15px;
-}
-
-.media {
-  margin-bottom: 10px;
+.doc-profile {
+  border: 3px solid #000;
+  border-radius: 4px;
 }
